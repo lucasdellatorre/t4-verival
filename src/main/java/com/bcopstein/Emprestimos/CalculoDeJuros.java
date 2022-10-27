@@ -1,5 +1,8 @@
 package com.bcopstein.Emprestimos;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class CalculoDeJuros {
     public static final double TXSEGUROPADRAO = 0.01;
     private double txSeguro;

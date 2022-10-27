@@ -1,5 +1,7 @@
 package com.bcopstein.Emprestimos;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/emprestimo")
 public class EmprestimoController {
+    @Autowired
     private CalculoDeJuros calcJuros;
     public EmprestimoController(CalculoDeJuros calcJuros){
         this.calcJuros = calcJuros;
