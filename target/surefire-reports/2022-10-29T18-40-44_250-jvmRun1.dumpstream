@@ -1,0 +1,13 @@
+# Created at 2022-10-29T18:40:47.426
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:397)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+
+# Created at 2022-10-29T18:40:48.165
+Unexpected IOException with stream: 2022-10-29 18:40:48.164  INFO 6103 --- [           main] c.bcopstein.Emprestimos.EmprestimoTests  : Started EmprestimoTests in 2.564 seconds (JVM running for 3.688)
+
+

@@ -1,6 +1,6 @@
 com/bcopstein/Emprestimos/EmprestimosApplication.class
 com/bcopstein/Emprestimos/Emprestimo.class
 com/bcopstein/Emprestimos/Emprestimo$Builder.class
-com/bcopstein/Emprestimos/EmprestimoDTO.class
 com/bcopstein/Emprestimos/CalculoDeJuros.class
+com/bcopstein/Emprestimos/EmprestimoDTO.class
 com/bcopstein/Emprestimos/EmprestimoController.class
