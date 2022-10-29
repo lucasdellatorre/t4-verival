@@ -1,7 +1,6 @@
 package com.bcopstein.Emprestimos;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,8 +30,6 @@ public class EmprestimoController {
                                     .jurosSimples()
                                     .build();
 
-        double valorParcela = emprestimo.custoTotal() / emprestimo.getNroParcelas();
-
         EmprestimoDTO resp = new EmprestimoDTO(
                                     emprestimo.isSegurado(),
                                     emprestimo.isJurosCompostos(), 
@@ -40,7 +37,8 @@ public class EmprestimoController {
                                     emprestimo.getTaxa(),
                                     emprestimo.getNroParcelas(),
                                     emprestimo.custoTotal(),
-                                    valorParcela);
+                                    emprestimo.valorParcela()
+                                    );
         return resp;
     }
 
@@ -58,8 +56,6 @@ public class EmprestimoController {
                                     .jurosCompostos()
                                     .build();
 
-        double valorParcela = emprestimo.custoTotal()/emprestimo.getNroParcelas();
-
         EmprestimoDTO resp = new EmprestimoDTO(
                                     emprestimo.isSegurado(),
                                     emprestimo.isJurosCompostos(), 
@@ -67,7 +63,8 @@ public class EmprestimoController {
                                     emprestimo.getTaxa(),
                                     emprestimo.getNroParcelas(),
                                     emprestimo.custoTotal(),
-                                    valorParcela);
+                                    emprestimo.valorParcela()
+                                    );
         return resp;
     }
 }
