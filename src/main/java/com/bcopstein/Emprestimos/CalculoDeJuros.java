@@ -30,7 +30,7 @@ public class CalculoDeJuros {
     }
 
     public double jurosEmprestimoJurosSimples(double valor, double taxa, int nroParcelas) {
-        if (!isInputValid(valor, taxa, nroParcelas))
+        if (isInputValid(valor, taxa, nroParcelas))
             return -1;
         if (comSeguro)
             return (valor * (taxa + txSeguro) * nroParcelas);
@@ -39,7 +39,7 @@ public class CalculoDeJuros {
     }
 
     public double jurosEmprestimoJurosCompostos(double valor, double taxa, int nroParcelas) {
-        if (!isInputValid(valor, taxa, nroParcelas)) 
+        if (isInputValid(valor, taxa, nroParcelas))
             return -1;
         double tx = taxa;
         if (comSeguro){
