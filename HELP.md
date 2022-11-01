@@ -1,18 +1,18 @@
-# Getting Started
+# Documentação dos testes
 
-### Reference Documentation
-For further reference, please consider the following sections:
+### Autores: Eduardo D'alençon, Lucas Dellatorre e Pedro Semensato
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.7.5/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.7.5/maven-plugin/reference/html/#build-image)
-* [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/2.7.5/reference/htmlsingle/#using.devtools)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.7.5/reference/htmlsingle/#web)
+Para os testes unitários da classe CalculoDeJuros, foi utilizada a técnica de cobertura de código, onde todas as linhas de código e estruturas de decisão são exercitadas.
 
-### Guides
-The following guides illustrate how to use some features concretely:
+Tendo em vista que os dois métodos da classe funcionam de maneira extremamente similar, seus casos de teste seguiram a mesma lógica de funcionamento. Para cada um dos métodos, foram criados casos de teste tanto para o cenário no qual a taxa correspondente ao seguro é adicionada quanto para o cenário no qual ela não é adicionada.
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
+Já para os testes de integração, preferimos a utilização do Mockito para a injeção de dependências.
+
+Na classe EmprestimoController, utilizamos a Autoconfiguração fornecida pelo Spring para instanciar o MockMvc.
+
+Utilizamos um método de teste para cada requisição e modelamos o resultado esperado. Como neste caso o recebimento se dá através de uma requisição, transformamos o arquivo JSON em uma string antes de extrairmos o resultado.
+
+Na classe de Empréstimo, utilizamos o Mock da classe responsável pelo calculo de Juros e instanciamos um conjunto de valores iniciais. Deste, testamos apenas o comportamento esperado acessar a API. 
+
+
 
