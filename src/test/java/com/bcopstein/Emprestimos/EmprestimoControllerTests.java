@@ -27,8 +27,8 @@ public class EmprestimoControllerTests {
          + "\"valor\":20.0," 
          + "\"taxa\":0.03,"
          + "\"nroParcelas\":4,"
-         + "\"valorTotal\":20.2,"
-         + "\"valorParcela\":5.05"
+         + "\"valorTotal\":24.4,"
+         + "\"valorParcela\":6.1"
         + "}";
 
         Assertions.assertEquals(jsonString, result.getResponse().getContentAsString());
@@ -43,11 +43,11 @@ public class EmprestimoControllerTests {
         "{"
          + "\"segurado\":true,"
          + "\"jurosCompostos\":true," 
-         + "\"valor\":10.0," 
+         + "\"valor\":10.0,"
          + "\"taxa\":0.03,"
          + "\"nroParcelas\":3,"
-         + "\"valorTotal\":9.6,"
-         + "\"valorParcela\":3.1999999999999997"
+         + "\"valorTotal\":11.84864,"
+         + "\"valorParcela\":3.9495466666666665"
         + "}";
 
         Assertions.assertEquals(jsonString, result.getResponse().getContentAsString());
